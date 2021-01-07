@@ -741,10 +741,10 @@ for(i in 1:nrow(param_grid)) {
     objective = "binary:logistic",
     nrounds = 100,
     early_stopping_rounds = 10,
-    max_depth = 3, #param_grid$max_depth[i],
-    min_child_weight = 1, #param_grid$min_child_weight[i],
-    subsample = 1, #param_grid$subsample[i],
-    colsample_bytree = 1, #param_grid$colsample_bytree[i],
+    max_depth = param_grid$max_depth[i],
+    min_child_weight = param_grid$min_child_weight[i],
+    subsample = 1,
+    colsample_bytree = 1,
     eta = 0.1,
     prediction = TRUE
   )
@@ -1064,8 +1064,8 @@ for(i in 1:nrow(param_grid)) {
     early_stopping_rounds = 10,
     max_depth = param_grid$max_depth[i],
     min_child_weight = param_grid$min_child_weight[i],
-    subsample = 1, #param_grid$subsample[i],
-    colsample_bytree = 1, #param_grid$colsample_bytree[i],
+    subsample = 1, 
+    colsample_bytree = 1, 
     eta = 0.1,
   )
 
